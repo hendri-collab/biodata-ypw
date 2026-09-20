@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Hide scrollbar for clean horizontal strips on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide everything except the print sheet */
+  header,
+  footer,
+  nav,
+  .no-print,
+  button,
+  input,
+  select {
+    display: none !important;
+  }
+
+  #biodata-print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+  }
+}
