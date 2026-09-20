@@ -2,7 +2,7 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     // Pengurus dan publik dapat membaca dan menulis data anggota Wahidiyah Kecamatan Cipayung
-    match /anggota_wahidiyah/{anggotaId} {
+    match /anggota/{anggotaId} {
       allow read, write: if true;
     }
   }
